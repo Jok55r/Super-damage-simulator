@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b4f0832c75b1144dadd79a2af5c2928, type: 3}
+  m_Name: Grandfather
+  m_EditorClassIdentifier: 
+  creatureName: John Lee
+  image: {fileID: 21300000, guid: 9f844640850002841b6bd1b9ae3975d5, type: 3}
+  power: 3
+  star: 0
+  type: 0
+  speed: 10
+  jumpHeight: 300
+  attackRadius: 4
+  health: 30
+  damage: 20
+  crate: 50
+  cdamage: 100
+  defence: 50
+  attackSpeed: 0
+  healthUP: 20
+  damageUP: 10
+  crateUP: 10
+  cdamageUP: 20
+  defenceUP: 100
