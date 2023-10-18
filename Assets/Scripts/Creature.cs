@@ -15,14 +15,14 @@ public class Creature : MonoBehaviour
     public int MoneyPerLevel;
     public int levelXP;
 
-    public float health;
+    public float maxhealth;
     public float damage;
     public float crate;
     public float cdamage;
     public float defence;
     public float attackSpeed;
 
-    public float maxhealth;
+    public float health;
     public float curdamage;
     public float curcrate;
     public float curcdamage;
@@ -38,13 +38,17 @@ public class Creature : MonoBehaviour
 
     private float oldSpeed;
     private bool burning = false;
-    private float electroGrassBonus = 1;
+    private float electroGrassBonusTake = 1;
     private bool haveShield = false;
     private float shieldBonus = 0;
 
 
     private void Start()
     {
+        level = 1;
+        MoneyPerLevel = 100;
+        levelXP = 1;
+
         gameObject.GetComponent<SpriteRenderer>().sprite = data.image;
         maxhealth = data.health;
         damage = data.damage;
@@ -67,7 +71,7 @@ public class Creature : MonoBehaviour
 
     private void Update()
     {
-        if (health <= 0)
+        if (data.type == Type.enemy && health <= 0)
             Destroy(gameObject);
         UpdateHealthBar();
     }
@@ -95,7 +99,7 @@ public class Creature : MonoBehaviour
         hit.gameObject.GetComponent<SpriteRenderer>().color = newCol;
 
         hit.transform.localScale = Vector3.one * data.attackRadius;
-        hit.GetComponent<HitRegScript>().damage = CalculateDamage();
+        hit.GetComponent<HitRegScript>().damage = SenderDamage();
         hit.GetComponent<HitRegScript>().power = hitPower;
         hit.GetComponent<HitRegScript>().character = character;
         hit.tag = tag;
@@ -108,12 +112,8 @@ public class Creature : MonoBehaviour
 
         Debug.Log($"{hitDamage} DMG raw");
 
-        hitDamage *= electroGrassBonus;
-        hitDamage -= curdefence - initiator.shieldBonus;
-        hitDamage = hitDamage < 0 ? 0 : hitDamage;
+        health -= RecieverDamage(hitDamage, initiator);
 
-
-        health -= hitDamage;
         Debug.Log($"{hitDamage} DMG calculated");
 
         curPower = hitPower;
@@ -123,14 +123,36 @@ public class Creature : MonoBehaviour
         tmp.color = powerCol(hitPower);
     }
 
-    public float CalculateDamage()
+    public void LevelUP()
     {
-        float fullDamage = curdamage * electroGrassBonus;
+        level++;
+        MoneyPerLevel += 200;
+        levelXP++;
+
+
+        maxhealth += data.healthUP;
+        damage += data.damageUP;
+        defence += data.defenceUP;
+        crate += data.crateUP;
+        cdamage += data.cdamageUP;
+        UpdateStats();
+    }
+
+    public float SenderDamage()
+    {
+        float fullDamage = curdamage;
 
         if (UnityEngine.Random.Range(0f, 100f) < curcrate)
             fullDamage *= 1f + (curcdamage / 100f);
 
         return fullDamage;
+    }
+
+    public float RecieverDamage(float hitDamage, Creature initiator)
+    {
+        hitDamage *= electroGrassBonusTake;
+        hitDamage -= curdefence - initiator.shieldBonus;
+        return hitDamage < 0 ? 0 : hitDamage;
     }
 
     public float Reaction(Power p1, Power p2, float hitDamage, Creature initiator)
@@ -163,7 +185,7 @@ public class Creature : MonoBehaviour
         }
         if (BothSidesPower(p1, Power.electro, p2, Power.grass))
         {
-            electroGrassBonus = 2.8f;
+            electroGrassBonusTake = 2.8f;
             Invoke("EndElectroGrassBonus", 5);
             return hitDamage;
         } //shield not working below
@@ -209,21 +231,23 @@ public class Creature : MonoBehaviour
     }
 
     void EndElectroGrassBonus()
-        => electroGrassBonus = 1;
+        => electroGrassBonusTake = 1;
 
     void SpawnShield(Power power, Creature initiator)
     {
         float time = 5f;
 
         haveShield = true;
-        shieldBonus = 100;
+        shieldBonus = initiator.defence * 2;
 
         var s = Instantiate(sphere, initiator.gameObject.transform);
+
         s.GetComponent<HitRegScript>().disapearTime = time;
         s.transform.localScale = Vector3.one * 4;
         Color newCol = powerCol(power);
         newCol.a = 0.3f;
         s.GetComponent<SpriteRenderer>().color = newCol;
+
         Invoke("BreakShield", time);
     }
     void BreakShield()
@@ -234,23 +258,10 @@ public class Creature : MonoBehaviour
 
     #endregion reactions
 
+
+
     public bool BothSidesPower(Power a, Power a2, Power b, Power b2)
         => a == a2 && b == b2 || a == b2 && b == a2;
-
-    public void LevelUP()
-    {
-        level++;
-        MoneyPerLevel += 200;
-        levelXP++;
-
-
-        maxhealth += data.healthUP;
-        damage += data.damageUP;
-        defence += data.defenceUP;
-        crate += data.crateUP;
-        cdamage += data.cdamageUP;
-        UpdateStats();
-    }
 
     private void UpdateHealthBar()
     {

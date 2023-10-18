@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Net.Http.Headers;
+using TMPro;
 using UnityEditor;
 using UnityEngine;
 
@@ -9,62 +11,59 @@ public class PlayerScript : MonoBehaviour
 
     public int current;
 
+    public Rigidbody2D rb;
+    public GameObject sphere;
+    public SpriteRenderer healthBar;
+    public SpriteRenderer healthBar2;
+    public TextMeshPro damageText;
+
+    public void Start()
+    {
+        foreach (var creature in character)
+        {
+            creature.rb = rb;
+            creature.sphere = sphere;
+            creature.healthBar = healthBar;
+            creature.healthBar2 = healthBar2;
+            creature.damageText = damageText;
+        }
+    }
+
     public void Update()
     {
+        if (character[current].health <= 0)
+        {
+            character[current].data.aviable = false;
+            for (int i = 0; i < character.Count; i++)
+            {
+                if (character[i].data.aviable)
+                {
+                    SwitchCharacter(i);
+                    break;
+                }
+            }
+        }
+
         if (Input.GetKeyDown(KeyCode.Mouse0))
             character[current].Hit("player hit", character[current].data.power, character[current]);
         Move();
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            current = 0;
-            gameObject.GetComponent<SpriteRenderer>().sprite = character[current].data.image;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            current = 1;
-            gameObject.GetComponent<SpriteRenderer>().sprite = character[current].data.image;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            current = 2;
-            gameObject.GetComponent<SpriteRenderer>().sprite = character[current].data.image;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            current = 3;
-            gameObject.GetComponent<SpriteRenderer>().sprite = character[current].data.image;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha5))
-        {
-            current = 4;
-            gameObject.GetComponent<SpriteRenderer>().sprite = character[current].data.image;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha6))
-        {
-            current = 5;
-            gameObject.GetComponent<SpriteRenderer>().sprite = character[current].data.image;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha7))
-        {
-            current = 6;
-            gameObject.GetComponent<SpriteRenderer>().sprite = character[current].data.image;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha8))
-        {
-            current = 7;
-            gameObject.GetComponent<SpriteRenderer>().sprite = character[current].data.image;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha9))
-        {
-            current = 8;
-            gameObject.GetComponent<SpriteRenderer>().sprite = character[current].data.image;
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha0))
-        {
-            current = 9;
-            gameObject.GetComponent<SpriteRenderer>().sprite = character[current].data.image;
-        }
+        if (Input.GetKeyDown(KeyCode.Alpha1) && character[0].data.aviable)
+            SwitchCharacter(0);
+        if (Input.GetKeyDown(KeyCode.Alpha2) && character[1].data.aviable)
+            SwitchCharacter(1);
+        if (Input.GetKeyDown(KeyCode.Alpha3) && character[2].data.aviable)
+            SwitchCharacter(2);
+        if (Input.GetKeyDown(KeyCode.Alpha4) && character[3].data.aviable)
+            SwitchCharacter(3);
+        if (Input.GetKeyDown(KeyCode.Alpha5) && character[4].data.aviable)
+            SwitchCharacter(4);
+    }
+
+    private void SwitchCharacter(int index)
+    {
+        current = index;
+        gameObject.GetComponent<SpriteRenderer>().sprite = character[current].data.image;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

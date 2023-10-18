@@ -280,22 +280,192 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character:
-  - {fileID: 1252676017636872591}
-  - {fileID: 1252676017636872592}
-  - {fileID: 1252676017636872593}
-  - {fileID: 1252676017636872600}
-  - {fileID: 1252676017636872595}
-  - {fileID: 1252676017636872596}
-  - {fileID: 1252676017636872596}
-  - {fileID: 1252676017636872600}
-  - {fileID: 1252676017636872596}
-  - {fileID: 1252676017636872596}
+  - {fileID: 172232961}
+  - {fileID: 172232965}
+  - {fileID: 172232964}
+  - {fileID: 172232963}
+  - {fileID: 172232962}
   current: 0
+  rb: {fileID: 172232951}
+  sphere: {fileID: 6049005288908211687, guid: 21b17758bc757f3418a823974ed2419d, type: 3}
+  healthBar: {fileID: 780322970}
+  healthBar2: {fileID: 1901509304}
+  damageText: {fileID: 8782110501416039993, guid: 6c08781f65199a648a5f4cbc097f42f2, type: 3}
 --- !u!4 &172232960 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4327044804328312750, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
   m_PrefabInstance: {fileID: 1252676017636872588}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &172232961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172232950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891df83ab281dbf488093e8b6f2cfe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: f0b3eb98f822c7340aaf2fcc598f26e3, type: 2}
+  curPower: 0
+  level: 0
+  MoneyPerLevel: 0
+  levelXP: 0
+  maxhealth: 0
+  damage: 0
+  crate: 0
+  cdamage: 0
+  defence: 0
+  attackSpeed: 0
+  health: 0
+  curdamage: 0
+  curcrate: 0
+  curcdamage: 0
+  curdefence: 0
+  curattackSpeed: 0
+  rb: {fileID: 0}
+  sphere: {fileID: 0}
+  healthBar: {fileID: 0}
+  healthBar2: {fileID: 0}
+  damageText: {fileID: 0}
+--- !u!114 &172232962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172232950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891df83ab281dbf488093e8b6f2cfe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: abb73295f271bf348a0a4826c56c35e0, type: 2}
+  curPower: 0
+  level: 0
+  MoneyPerLevel: 0
+  levelXP: 0
+  maxhealth: 0
+  damage: 0
+  crate: 0
+  cdamage: 0
+  defence: 0
+  attackSpeed: 0
+  health: 0
+  curdamage: 0
+  curcrate: 0
+  curcdamage: 0
+  curdefence: 0
+  curattackSpeed: 0
+  rb: {fileID: 0}
+  sphere: {fileID: 0}
+  healthBar: {fileID: 0}
+  healthBar2: {fileID: 0}
+  damageText: {fileID: 0}
+--- !u!114 &172232963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172232950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891df83ab281dbf488093e8b6f2cfe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: d0851d3217ce0684eac443156bcaf222, type: 2}
+  curPower: 0
+  level: 0
+  MoneyPerLevel: 0
+  levelXP: 0
+  maxhealth: 0
+  damage: 0
+  crate: 0
+  cdamage: 0
+  defence: 0
+  attackSpeed: 0
+  health: 0
+  curdamage: 0
+  curcrate: 0
+  curcdamage: 0
+  curdefence: 0
+  curattackSpeed: 0
+  rb: {fileID: 0}
+  sphere: {fileID: 0}
+  healthBar: {fileID: 0}
+  healthBar2: {fileID: 0}
+  damageText: {fileID: 0}
+--- !u!114 &172232964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172232950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891df83ab281dbf488093e8b6f2cfe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: a0e8fb046b026ed468296e506ad81d4f, type: 2}
+  curPower: 0
+  level: 0
+  MoneyPerLevel: 0
+  levelXP: 0
+  maxhealth: 0
+  damage: 0
+  crate: 0
+  cdamage: 0
+  defence: 0
+  attackSpeed: 0
+  health: 0
+  curdamage: 0
+  curcrate: 0
+  curcdamage: 0
+  curdefence: 0
+  curattackSpeed: 0
+  rb: {fileID: 0}
+  sphere: {fileID: 0}
+  healthBar: {fileID: 0}
+  healthBar2: {fileID: 0}
+  damageText: {fileID: 0}
+--- !u!114 &172232965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 172232950}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 891df83ab281dbf488093e8b6f2cfe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  data: {fileID: 11400000, guid: a57382908f061b9439da62010fc3fc11, type: 2}
+  curPower: 0
+  level: 0
+  MoneyPerLevel: 0
+  levelXP: 0
+  maxhealth: 0
+  damage: 0
+  crate: 0
+  cdamage: 0
+  defence: 0
+  attackSpeed: 0
+  health: 0
+  curdamage: 0
+  curcrate: 0
+  curcdamage: 0
+  curdefence: 0
+  curattackSpeed: 0
+  rb: {fileID: 0}
+  sphere: {fileID: 0}
+  healthBar: {fileID: 0}
+  healthBar2: {fileID: 0}
+  damageText: {fileID: 0}
 --- !u!1 &182817639
 GameObject:
   m_ObjectHideFlags: 0
@@ -870,7 +1040,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0, g: 0.099056594, b: 0.254717, a: 0}
+  m_BackGroundColor: {r: 0.06314526, g: 0.19488186, b: 0.4056604, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -4400,7 +4570,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -10589780914879921, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 4327044804328312750, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
@@ -4409,267 +4580,23 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6171501732734794324, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
       insertIndex: 2
-      addedObject: {fileID: 1252676017636872591}
-    - targetCorrespondingSourceObject: {fileID: 6171501732734794324, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
-      insertIndex: 3
-      addedObject: {fileID: 1252676017636872592}
-    - targetCorrespondingSourceObject: {fileID: 6171501732734794324, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
-      insertIndex: 4
-      addedObject: {fileID: 1252676017636872593}
-    - targetCorrespondingSourceObject: {fileID: 6171501732734794324, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
-      insertIndex: 5
-      addedObject: {fileID: 1252676017636872594}
-    - targetCorrespondingSourceObject: {fileID: 6171501732734794324, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
-      insertIndex: 6
-      addedObject: {fileID: 1252676017636872595}
-    - targetCorrespondingSourceObject: {fileID: 6171501732734794324, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
-      insertIndex: 7
-      addedObject: {fileID: 1252676017636872596}
-    - targetCorrespondingSourceObject: {fileID: 6171501732734794324, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
-      insertIndex: 8
-      addedObject: {fileID: 1252676017636872600}
-    - targetCorrespondingSourceObject: {fileID: 6171501732734794324, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
-      insertIndex: 9
       addedObject: {fileID: 172232957}
+    - targetCorrespondingSourceObject: {fileID: 6171501732734794324, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 172232961}
+    - targetCorrespondingSourceObject: {fileID: 6171501732734794324, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 172232965}
+    - targetCorrespondingSourceObject: {fileID: 6171501732734794324, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 172232964}
+    - targetCorrespondingSourceObject: {fileID: 6171501732734794324, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 172232963}
+    - targetCorrespondingSourceObject: {fileID: 6171501732734794324, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 172232962}
   m_SourcePrefab: {fileID: 100100000, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
---- !u!114 &1252676017636872591
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172232950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891df83ab281dbf488093e8b6f2cfe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: f0b3eb98f822c7340aaf2fcc598f26e3, type: 2}
-  curPower: 0
-  level: 1
-  MoneyPerLevel: 10
-  levelXP: 0
-  health: 0
-  damage: 0
-  crate: 0
-  cdamage: 0
-  defence: 0
-  attackSpeed: 0
-  maxhealth: 0
-  curdamage: 0
-  curcrate: 0
-  curcdamage: 0
-  curdefence: 0
-  curattackSpeed: 0
-  rb: {fileID: 172232951}
-  sphere: {fileID: 6049005288908211687, guid: 21b17758bc757f3418a823974ed2419d, type: 3}
-  healthBar: {fileID: 780322970}
-  healthBar2: {fileID: 1901509304}
-  damageText: {fileID: 8782110501416039993, guid: 6c08781f65199a648a5f4cbc097f42f2, type: 3}
---- !u!114 &1252676017636872592
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172232950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891df83ab281dbf488093e8b6f2cfe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: a57382908f061b9439da62010fc3fc11, type: 2}
-  curPower: 0
-  level: 1
-  MoneyPerLevel: 100
-  levelXP: 1
-  health: 0
-  damage: 0
-  crate: 0
-  cdamage: 0
-  defence: 0
-  attackSpeed: 0
-  maxhealth: 0
-  curdamage: 0
-  curcrate: 0
-  curcdamage: 0
-  curdefence: 0
-  curattackSpeed: 0
-  rb: {fileID: 172232951}
-  sphere: {fileID: 6049005288908211687, guid: 21b17758bc757f3418a823974ed2419d, type: 3}
-  healthBar: {fileID: 780322970}
-  healthBar2: {fileID: 1901509304}
-  damageText: {fileID: 8782110501416039993, guid: 6c08781f65199a648a5f4cbc097f42f2, type: 3}
---- !u!114 &1252676017636872593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172232950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891df83ab281dbf488093e8b6f2cfe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: a0e8fb046b026ed468296e506ad81d4f, type: 2}
-  curPower: 0
-  level: 1
-  MoneyPerLevel: 100
-  levelXP: 1
-  health: 0
-  damage: 0
-  crate: 0
-  cdamage: 0
-  defence: 0
-  attackSpeed: 0
-  maxhealth: 0
-  curdamage: 0
-  curcrate: 0
-  curcdamage: 0
-  curdefence: 0
-  curattackSpeed: 0
-  rb: {fileID: 172232951}
-  sphere: {fileID: 6049005288908211687, guid: 21b17758bc757f3418a823974ed2419d, type: 3}
-  healthBar: {fileID: 780322970}
-  healthBar2: {fileID: 1901509304}
-  damageText: {fileID: 8782110501416039993, guid: 6c08781f65199a648a5f4cbc097f42f2, type: 3}
---- !u!114 &1252676017636872594
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172232950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891df83ab281dbf488093e8b6f2cfe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: b986b52cd972e634eaf51f336ceb12c3, type: 2}
-  curPower: 0
-  level: 1
-  MoneyPerLevel: 100
-  levelXP: 1
-  health: 0
-  damage: 0
-  crate: 0
-  cdamage: 0
-  defence: 0
-  attackSpeed: 0
-  maxhealth: 0
-  curdamage: 0
-  curcrate: 0
-  curcdamage: 0
-  curdefence: 0
-  curattackSpeed: 0
-  rb: {fileID: 172232951}
-  sphere: {fileID: 6049005288908211687, guid: 21b17758bc757f3418a823974ed2419d, type: 3}
-  healthBar: {fileID: 780322970}
-  healthBar2: {fileID: 1901509304}
-  damageText: {fileID: 8782110501416039993, guid: 6c08781f65199a648a5f4cbc097f42f2, type: 3}
---- !u!114 &1252676017636872595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172232950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891df83ab281dbf488093e8b6f2cfe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: d0851d3217ce0684eac443156bcaf222, type: 2}
-  curPower: 0
-  level: 1
-  MoneyPerLevel: 100
-  levelXP: 1
-  health: 0
-  damage: 0
-  crate: 0
-  cdamage: 0
-  defence: 0
-  attackSpeed: 0
-  maxhealth: 0
-  curdamage: 0
-  curcrate: 0
-  curcdamage: 0
-  curdefence: 0
-  curattackSpeed: 0
-  rb: {fileID: 172232951}
-  sphere: {fileID: 6049005288908211687, guid: 21b17758bc757f3418a823974ed2419d, type: 3}
-  healthBar: {fileID: 780322970}
-  healthBar2: {fileID: 1901509304}
-  damageText: {fileID: 8782110501416039993, guid: 6c08781f65199a648a5f4cbc097f42f2, type: 3}
---- !u!114 &1252676017636872596
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172232950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891df83ab281dbf488093e8b6f2cfe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: abb73295f271bf348a0a4826c56c35e0, type: 2}
-  curPower: 0
-  level: 1
-  MoneyPerLevel: 100
-  levelXP: 1
-  health: 0
-  damage: 0
-  crate: 0
-  cdamage: 0
-  defence: 0
-  attackSpeed: 0
-  maxhealth: 0
-  curdamage: 0
-  curcrate: 0
-  curcdamage: 0
-  curdefence: 0
-  curattackSpeed: 0
-  rb: {fileID: 172232951}
-  sphere: {fileID: 6049005288908211687, guid: 21b17758bc757f3418a823974ed2419d, type: 3}
-  healthBar: {fileID: 780322970}
-  healthBar2: {fileID: 1901509304}
-  damageText: {fileID: 8782110501416039993, guid: 6c08781f65199a648a5f4cbc097f42f2, type: 3}
---- !u!114 &1252676017636872600
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172232950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891df83ab281dbf488093e8b6f2cfe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: b384ab517ea102149a406375e34c59a2, type: 2}
-  curPower: 0
-  level: 1
-  MoneyPerLevel: 10
-  levelXP: 1
-  health: 0
-  damage: 0
-  crate: 0
-  cdamage: 0
-  defence: 0
-  attackSpeed: 0
-  maxhealth: 0
-  curdamage: 0
-  curcrate: 0
-  curcdamage: 0
-  curdefence: 0
-  curattackSpeed: 0
-  rb: {fileID: 172232951}
-  sphere: {fileID: 6049005288908211687, guid: 21b17758bc757f3418a823974ed2419d, type: 3}
-  healthBar: {fileID: 780322970}
-  healthBar2: {fileID: 1901509304}
-  damageText: {fileID: 8782110501416039993, guid: 6c08781f65199a648a5f4cbc097f42f2, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
