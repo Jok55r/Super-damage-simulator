@@ -15,6 +15,7 @@ MonoBehaviour:
   creatureName: Hu Tao
   image: {fileID: 21300000, guid: 4ef12f662a0d0934e81924bb5d30a0fd, type: 3}
   power: 4
+  star: 0
   type: 0
   speed: 10
   jumpHeight: 300
@@ -30,3 +31,4 @@ MonoBehaviour:
   crateUP: 2
   cdamageUP: 10
   defenceUP: 1
+  aviable: 1

@@ -16,7 +16,7 @@ public class GameManager  : MonoBehaviour
 
     public void TryLevelUP()
     {
-        Creature character = player.GetComponent<PlayerScript>().character[player.GetComponent<PlayerScript>().current];
+        Creature character = player.GetComponent<PlayerScript>().characters[player.GetComponent<PlayerScript>().current];
 
         if (character.MoneyPerLevel * character.level <= Global.money && character.levelXP <= Global.XP)
         {
@@ -29,7 +29,7 @@ public class GameManager  : MonoBehaviour
 
     public void ToggleLevelPanel()
     {
-        Creature character = player.GetComponent<PlayerScript>().character[player.GetComponent<PlayerScript>().current];
+        Creature character = player.GetComponent<PlayerScript>().characters[player.GetComponent<PlayerScript>().current];
 
         levelPanel.SetActive(!levelPanel.activeSelf);
         gameSpeed = levelPanel.activeSelf ? 0 : 1;

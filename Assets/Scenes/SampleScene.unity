@@ -279,12 +279,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 687cb9d7a91695041bdc41f0ea9e4dea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character:
-  - {fileID: 172232961}
-  - {fileID: 172232965}
-  - {fileID: 172232964}
-  - {fileID: 172232963}
-  - {fileID: 172232962}
+  creatures:
+  - {fileID: 11400000, guid: f0b3eb98f822c7340aaf2fcc598f26e3, type: 2}
+  - {fileID: 11400000, guid: a57382908f061b9439da62010fc3fc11, type: 2}
+  - {fileID: 11400000, guid: a0e8fb046b026ed468296e506ad81d4f, type: 2}
+  - {fileID: 11400000, guid: d0851d3217ce0684eac443156bcaf222, type: 2}
+  - {fileID: 11400000, guid: b986b52cd972e634eaf51f336ceb12c3, type: 2}
+  characters: []
   current: 0
   rb: {fileID: 172232951}
   sphere: {fileID: 6049005288908211687, guid: 21b17758bc757f3418a823974ed2419d, type: 3}
@@ -296,176 +297,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4327044804328312750, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
   m_PrefabInstance: {fileID: 1252676017636872588}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &172232961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172232950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891df83ab281dbf488093e8b6f2cfe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: f0b3eb98f822c7340aaf2fcc598f26e3, type: 2}
-  curPower: 0
-  level: 0
-  MoneyPerLevel: 0
-  levelXP: 0
-  maxhealth: 0
-  damage: 0
-  crate: 0
-  cdamage: 0
-  defence: 0
-  attackSpeed: 0
-  health: 0
-  curdamage: 0
-  curcrate: 0
-  curcdamage: 0
-  curdefence: 0
-  curattackSpeed: 0
-  rb: {fileID: 0}
-  sphere: {fileID: 0}
-  healthBar: {fileID: 0}
-  healthBar2: {fileID: 0}
-  damageText: {fileID: 0}
---- !u!114 &172232962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172232950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891df83ab281dbf488093e8b6f2cfe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: abb73295f271bf348a0a4826c56c35e0, type: 2}
-  curPower: 0
-  level: 0
-  MoneyPerLevel: 0
-  levelXP: 0
-  maxhealth: 0
-  damage: 0
-  crate: 0
-  cdamage: 0
-  defence: 0
-  attackSpeed: 0
-  health: 0
-  curdamage: 0
-  curcrate: 0
-  curcdamage: 0
-  curdefence: 0
-  curattackSpeed: 0
-  rb: {fileID: 0}
-  sphere: {fileID: 0}
-  healthBar: {fileID: 0}
-  healthBar2: {fileID: 0}
-  damageText: {fileID: 0}
---- !u!114 &172232963
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172232950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891df83ab281dbf488093e8b6f2cfe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: d0851d3217ce0684eac443156bcaf222, type: 2}
-  curPower: 0
-  level: 0
-  MoneyPerLevel: 0
-  levelXP: 0
-  maxhealth: 0
-  damage: 0
-  crate: 0
-  cdamage: 0
-  defence: 0
-  attackSpeed: 0
-  health: 0
-  curdamage: 0
-  curcrate: 0
-  curcdamage: 0
-  curdefence: 0
-  curattackSpeed: 0
-  rb: {fileID: 0}
-  sphere: {fileID: 0}
-  healthBar: {fileID: 0}
-  healthBar2: {fileID: 0}
-  damageText: {fileID: 0}
---- !u!114 &172232964
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172232950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891df83ab281dbf488093e8b6f2cfe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: a0e8fb046b026ed468296e506ad81d4f, type: 2}
-  curPower: 0
-  level: 0
-  MoneyPerLevel: 0
-  levelXP: 0
-  maxhealth: 0
-  damage: 0
-  crate: 0
-  cdamage: 0
-  defence: 0
-  attackSpeed: 0
-  health: 0
-  curdamage: 0
-  curcrate: 0
-  curcdamage: 0
-  curdefence: 0
-  curattackSpeed: 0
-  rb: {fileID: 0}
-  sphere: {fileID: 0}
-  healthBar: {fileID: 0}
-  healthBar2: {fileID: 0}
-  damageText: {fileID: 0}
---- !u!114 &172232965
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 172232950}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 891df83ab281dbf488093e8b6f2cfe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  data: {fileID: 11400000, guid: a57382908f061b9439da62010fc3fc11, type: 2}
-  curPower: 0
-  level: 0
-  MoneyPerLevel: 0
-  levelXP: 0
-  maxhealth: 0
-  damage: 0
-  crate: 0
-  cdamage: 0
-  defence: 0
-  attackSpeed: 0
-  health: 0
-  curdamage: 0
-  curcrate: 0
-  curcdamage: 0
-  curdefence: 0
-  curattackSpeed: 0
-  rb: {fileID: 0}
-  sphere: {fileID: 0}
-  healthBar: {fileID: 0}
-  healthBar2: {fileID: 0}
-  damageText: {fileID: 0}
 --- !u!1 &182817639
 GameObject:
   m_ObjectHideFlags: 0
@@ -4581,21 +4412,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6171501732734794324, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
       insertIndex: 2
       addedObject: {fileID: 172232957}
-    - targetCorrespondingSourceObject: {fileID: 6171501732734794324, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 172232961}
-    - targetCorrespondingSourceObject: {fileID: 6171501732734794324, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 172232965}
-    - targetCorrespondingSourceObject: {fileID: 6171501732734794324, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 172232964}
-    - targetCorrespondingSourceObject: {fileID: 6171501732734794324, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 172232963}
-    - targetCorrespondingSourceObject: {fileID: 6171501732734794324, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 172232962}
   m_SourcePrefab: {fileID: 100100000, guid: d32f16707906a674ba294c1170fbc4fb, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

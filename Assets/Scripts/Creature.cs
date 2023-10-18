@@ -15,6 +15,8 @@ public class Creature : MonoBehaviour
     public int MoneyPerLevel;
     public int levelXP;
 
+    public bool aviable = true;
+
     public float maxhealth;
     public float damage;
     public float crate;
@@ -257,7 +259,6 @@ public class Creature : MonoBehaviour
     }
 
     #endregion reactions
-
 
 
     public bool BothSidesPower(Power a, Power a2, Power b, Power b2)

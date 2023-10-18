@@ -32,8 +32,6 @@ public class CreatureData : ScriptableObject
     public float crateUP;
     public float cdamageUP;
     public float defenceUP;
-
-    public bool aviable = true;
 }
 
 public enum Star

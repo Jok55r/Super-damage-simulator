@@ -7,7 +7,8 @@ using UnityEngine;
 
 public class PlayerScript : MonoBehaviour
 {
-    public List<Creature> character = new List<Creature>();
+    public List<CreatureData> creatures = new List<CreatureData>();
+    public List<Creature> characters = new List<Creature>();
 
     public int current;
 
@@ -19,7 +20,13 @@ public class PlayerScript : MonoBehaviour
 
     public void Start()
     {
-        foreach (var creature in character)
+        foreach (var creature in creatures)
+        {
+            Creature cr = gameObject.AddComponent<Creature>();
+            cr.data = creature;
+            characters.Add(cr);
+        }
+        foreach (var creature in characters)
         {
             creature.rb = rb;
             creature.sphere = sphere;
@@ -31,12 +38,12 @@ public class PlayerScript : MonoBehaviour
 
     public void Update()
     {
-        if (character[current].health <= 0)
+        if (characters[current].health <= 0)
         {
-            character[current].data.aviable = false;
-            for (int i = 0; i < character.Count; i++)
+            characters[current].aviable = false;
+            for (int i = 0; i < characters.Count; i++)
             {
-                if (character[i].data.aviable)
+                if (characters[i].aviable)
                 {
                     SwitchCharacter(i);
                     break;
@@ -45,40 +52,40 @@ public class PlayerScript : MonoBehaviour
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
-            character[current].Hit("player hit", character[current].data.power, character[current]);
+            characters[current].Hit("player hit", characters[current].data.power, characters[current]);
         Move();
 
-        if (Input.GetKeyDown(KeyCode.Alpha1) && character[0].data.aviable)
+        if (Input.GetKeyDown(KeyCode.Alpha1) && characters[0].aviable)
             SwitchCharacter(0);
-        if (Input.GetKeyDown(KeyCode.Alpha2) && character[1].data.aviable)
+        if (Input.GetKeyDown(KeyCode.Alpha2) && characters[1].aviable)
             SwitchCharacter(1);
-        if (Input.GetKeyDown(KeyCode.Alpha3) && character[2].data.aviable)
+        if (Input.GetKeyDown(KeyCode.Alpha3) && characters[2].aviable)
             SwitchCharacter(2);
-        if (Input.GetKeyDown(KeyCode.Alpha4) && character[3].data.aviable)
+        if (Input.GetKeyDown(KeyCode.Alpha4) && characters[3].aviable)
             SwitchCharacter(3);
-        if (Input.GetKeyDown(KeyCode.Alpha5) && character[4].data.aviable)
+        if (Input.GetKeyDown(KeyCode.Alpha5) && characters[4].aviable)
             SwitchCharacter(4);
     }
 
     private void SwitchCharacter(int index)
     {
         current = index;
-        gameObject.GetComponent<SpriteRenderer>().sprite = character[current].data.image;
+        gameObject.GetComponent<SpriteRenderer>().sprite = characters[current].data.image;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "enemy hit")
         {
-            character[current].TakeDamage(collision.gameObject.GetComponent<HitRegScript>().damage, collision.gameObject.GetComponent<HitRegScript>().power, collision.gameObject.GetComponent<HitRegScript>().character);
+            characters[current].TakeDamage(collision.gameObject.GetComponent<HitRegScript>().damage, collision.gameObject.GetComponent<HitRegScript>().power, collision.gameObject.GetComponent<HitRegScript>().character);
         }
     }
 
     private void Move()
     {
         if (Input.GetKeyDown(KeyCode.Space))
-            character[current].Move(Input.GetAxisRaw("Horizontal") * character[current].data.speed, true);
+            characters[current].Move(Input.GetAxisRaw("Horizontal") * characters[current].data.speed, true);
         else
-            character[current].Move(Input.GetAxisRaw("Horizontal") * character[current].data.speed, false);
+            characters[current].Move(Input.GetAxisRaw("Horizontal") * characters[current].data.speed, false);
     }
 }
