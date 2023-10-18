@@ -82,15 +82,15 @@ public class Creature : MonoBehaviour
     {
         direction = Mathf.Clamp(direction, -data.speed, data.speed);
         direction = Mathf.Approximately(direction, -data.speed) ? -data.speed : Mathf.Approximately(direction, data.speed) ? data.speed : 0;
-        transform.position += new Vector3(direction * Time.deltaTime * GameManager.gameSpeed, 0, 0);
+        transform.position += new Vector3(direction * Time.deltaTime * Global.gameSpeed, 0, 0);
 
         if (jump)
-            rb.AddForce(Vector2.up * data.jumpHeight * GameManager.gameSpeed);
+            rb.AddForce(Vector2.up * data.jumpHeight * Global.gameSpeed);
     }
 
     public void Hit(string tag, Power hitPower, Creature character)
     {
-        if (GameManager.gameSpeed == 0)
+        if (Global.gameSpeed == 0)
             return;
 
         GameObject hit = Instantiate(sphere, gameObject.transform.position, Quaternion.identity);

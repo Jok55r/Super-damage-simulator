@@ -21,14 +21,13 @@ MonoBehaviour:
   jumpHeight: 300
   attackRadius: 4
   health: 20
-  damage: 20
+  damage: 3569.8
   crate: 70
   cdamage: 250
   defence: 10
   attackSpeed: 0
   healthUP: 20
-  damageUP: 15
+  damageUP: 8539.7
   crateUP: 2
-  cdamageUP: 10
+  cdamageUP: 1101.12
   defenceUP: 1
-  aviable: 1

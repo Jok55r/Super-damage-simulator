@@ -15,7 +15,7 @@ MonoBehaviour:
   creatureName: Burito
   image: {fileID: 21300000, guid: 8ded33febba24004f9a72346379470eb, type: 3}
   power: 0
-  star: 0
+  star: 2
   type: 1
   speed: 1
   jumpHeight: 300

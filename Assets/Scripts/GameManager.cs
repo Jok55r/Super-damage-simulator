@@ -6,7 +6,6 @@ public class GameManager  : MonoBehaviour
 {
     public GameObject levelPanel;
     public GameObject player;
-    public static float gameSpeed = 1;
 
     private void Update()
     {
@@ -32,7 +31,7 @@ public class GameManager  : MonoBehaviour
         Creature character = player.GetComponent<PlayerScript>().characters[player.GetComponent<PlayerScript>().current];
 
         levelPanel.SetActive(!levelPanel.activeSelf);
-        gameSpeed = levelPanel.activeSelf ? 0 : 1;
+        Global.gameSpeed = levelPanel.activeSelf ? 0 : 1;
         levelPanel.GetComponent<CharacterPanelScript>().character = character;
         levelPanel.GetComponent<CharacterPanelScript>().UpdateValues();
     }

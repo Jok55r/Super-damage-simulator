@@ -11,7 +11,7 @@ public class HitRegScript : MonoBehaviour
 
     private void Start()
     {
-        Invoke("Destroy", disapearTime * GameManager.gameSpeed);
+        Invoke("Destroy", disapearTime * Global.gameSpeed);
     }
 
     private void Destroy()

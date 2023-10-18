@@ -34,10 +34,20 @@ public class CreatureData : ScriptableObject
     public float defenceUP;
 }
 
+public enum Weapon
+{
+    bow,
+    sword,
+    bigSword,
+    polearm,
+    catalyst,
+}
+
 public enum Star
 {
     five,
-    four
+    four,
+    none
 }
 
 public enum Type
